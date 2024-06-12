@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component/dist/aframe-layout-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+    <script src="dist/aframe-spe-particles-component.js"></script>
+</head>
+<body>
+    
+    <a-scene>
+        <a-sky color="black"></a-sky>
+        <a-camera position="-10 -10 10" rotation="0 0 0"></a-camera>
+        <a-entity position="0 0 0" spe-particles="color:red,white,green,blue,yellow,violet,purple; distribution:disc; radius:4; size:0.8; particle-count:1000 ">
+
+            <a-entity position="0 0 0" spe-particles="texture:blob.png; color:blue,white,gold,red; velocity: 0 0 10; velocity-spread: 2 2 0; acceleration: 0 0 -10; size:0.9 " ></a-entity>
+
+        </a-entity>
+
+        <a-entity
+        spe-particles="texture: square.png; color: yellow, red; distribution: disc; radius: .1; randomize-position: false; particle-count: 1000; velocity: 5; velocity-spread: 3; drag: 1; max-age: .5; active-multiplier: 1000; size: 1,.2; direction: backward"
+        >
+        </a-entity>
+
+        <a-entity
+        spe-particles="texture: square.png; color: yellow, red,pink,blue,white; distribution: disc; radius: 5.1; randomize-position: false; randomixe-velocity:true; particle-count: 1000; velocity: 1; velocity-spread: 3 ;  max-age: .5; active-multiplier: 1000; size: 1,.2; direction: forward"
+        >
+        </a-entity>
+        
+    </a-scene>
+</body>
+</html>
